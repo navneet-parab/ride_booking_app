@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Booking Ride App{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Pages</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('display_users') }}">Users</a>
+                    <a href="{{ url_for('display_riders') }}">Riders</a>
+                    <a href="{{ url_for('display_drivers') }}">Drivers</a>
+                    <a href="{{ url_for('display_trips') }}">Trips</a>
+                    <a href="{{ url_for('display_ratings') }}">Ratings</a>
+                </div>
+            </li>
+            <li><a href="{{ url_for('show_registration_form') }}">Register</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+<

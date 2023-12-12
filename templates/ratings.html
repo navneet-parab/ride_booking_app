@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Users - Booking Ride App{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings</title>
+</head>
+<body>
+    <h1>Rating Information</h1>
+    <table>
+        <tr>
+            <th>Rating ID</th>
+            <th>Rider Rating</th>
+            <th>Driver Rating</th>
+            <th>Comments</th>
+            <th>Trip ID</th>
+            <th>Rider Username</th>
+            <th>Driver Username</th>
+        </tr>
+        {% for rating in ratings %}
+            <tr>
+                <td>{{ rating[0] }}</td>
+                <td>{{ rating[1] }}</td>
+                <td>{{ rating[2] }}</td>
+                <td>{{ rating[3] }}</td>
+                <td>{{ rating[4] }}</td>
+                <td>{{ rating[5] }}</td>
+                <td>{{ rating[6] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+{% endblock %}

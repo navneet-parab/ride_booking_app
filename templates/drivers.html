@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Users - Booking Ride App{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers</title>
+</head>
+<body>
+    <h1>Driver Information</h1>
+    <table>
+        <tr>
+            <th>Driver ID</th>
+            <th>Username</th>
+            <th>Driver License</th>
+            <th>Vehicle Model</th>
+            <th>Vehicle Plate</th>
+            <th>Rating</th>
+        </tr>
+        {% for driver in drivers %}
+            <tr>
+                <td>{{ driver[0] }}</td>
+                <td>{{ driver[1] }}</td>
+                <td>{{ driver[2] }}</td>
+                <td>{{ driver[3] }}</td>
+                <td>{{ driver[4] }}</td>
+                <td>{{ driver[5] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+{% endblock %}

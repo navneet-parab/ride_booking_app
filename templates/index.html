@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask + PHPMyAdmin Example</title>
+</head>
+<body>
+    <h1>User Data</h1>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Username</th>
+            <!-- Add more table headers based on your Users table columns -->
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+                <!-- Add more table cells based on your Users table columns -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
